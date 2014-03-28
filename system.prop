@@ -1,4 +1,4 @@
-# system.prop for SHV-E120
+# system.prop for SHV-E120K
 #
 
 rild.libpath=/system/lib/libril-qc-qmi-1.so
