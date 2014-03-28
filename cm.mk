@@ -1,4 +1,4 @@
-$(call inherit-product, device/samsung/celoxhd/full_celoxhd.mk)
+$(call inherit-product, device/samsung/SHV-E120K/full_SHV-E120K.mk)
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/gsm.mk)
@@ -9,11 +9,11 @@ $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=SGH-I757M TARGET_DEVICE=SGH-I757M BUILD_FINGERPRINT="samsung/SGH-I757M/SGH-I757M:4.4.1/KOT49E/UGMC5:user/release-keys" PRIVATE_BUILD_DESC="SGH-I757M-user 4.4.1 KOT49E UGMC5 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=SHV-E120K TARGET_DEVICE=SHV-E120K BUILD_FINGERPRINT="samsung/SHV-E120K/SHV-E120K:4.4.2/KOT49E/KKMK1:user/release-keys" PRIVATE_BUILD_DESC="SHV-E120K-user 4.4.2 KOT49E KKMK1 release-keys"
 
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
-PRODUCT_NAME := cm_celoxhd
-PRODUCT_DEVICE := celoxhd
+PRODUCT_NAME := cm_SHV-E120K
+PRODUCT_DEVICE := SHV-E120K
 
