@@ -43,7 +43,7 @@ TARGET_KERNEL_CONFIG        := cyanogenmod_SHV-E120K_defconfig
 TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660-common
 
 # Assert minimum baseband version
-TARGET_BOARD_INFO_FILE ?= device/samsung/celoxhd/board-info.txt
+TARGET_BOARD_INFO_FILE ?= device/samsung/SHV-E120K/board-info.txt
 
 # cat /proc/emmc
 #dev:        size     erasesize name
