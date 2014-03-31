@@ -1,4 +1,4 @@
-$(call inherit-product, device/samsung/e120/full_e120.mk)
+$(call inherit-product, device/samsung/e120k/full_e120k.mk)
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/gsm.mk)
@@ -14,6 +14,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=SHV-E120K TARGET_DEVICE=SHV-E120K B
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
-PRODUCT_NAME := cm_e120
-PRODUCT_DEVICE := SHV-E120K
+PRODUCT_NAME := cm_e120k
+PRODUCT_DEVICE := e120k
 
