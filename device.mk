@@ -15,24 +15,24 @@
 #
 
 ## (2) Also get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/samsung/e120/e120-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/e120k/e120k-vendor.mk)
 
 ## overlays
-DEVICE_PACKAGE_OVERLAYS += device/samsung/e120/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/e120k/overlay
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    device/samsung/e120/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc
+    device/samsung/e120k/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc
 
 # BT firmware
 PRODUCT_COPY_FILES += \
-    device/samsung/e120/firmware/bcm4330B1.hcd:system/etc/firmware/bcm4330B1.hcd
+    device/samsung/e120k/firmware/bcm4330B1.hcd:system/etc/firmware/bcm4330B1.hcd
 
 # init.d scripts
 PRODUCT_COPY_FILES += \
-    device/samsung/e120/root/system/etc/init.d/91fixoverlays:system/etc/init.d/91fixoverlays
+    device/samsung/e120k/root/system/etc/init.d/91fixoverlays:system/etc/init.d/91fixoverlays
 
 # Inherit from celox-common
 $(call inherit-product, device/samsung/celox-common/celox-common.mk)
 
-$(call inherit-product-if-exists, vendor/samsung/e120/e120-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/e120k/e120k-vendor.mk)
