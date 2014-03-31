@@ -1,4 +1,4 @@
-## CM11.0 Build Instructions for SHV-E120
+## CM11.0 Build Instructions for e120k
 
 ### Setting Up The Source Tree
 You will first need to follow the instructions at http://source.android.com/source/initializing.html to setup and initialize your build environment.
@@ -20,8 +20,8 @@ To allow these additional repositories to be synced, you must create a file call
 <manifest>
   <project name="CyanogenMod/android_device_samsung_celox-common" path="device/samsung/celox-common" remote="github" revision="cm-11.0" />
   <project name="CyanogenMod/android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="github" revision="cm-11.0" />
-  <project name="evnit/android_device_samsung_SHV-E120" path="device/samsung/SHV-E120" remote="github" revision="cm-11.0" />
-  <project name="evnit/android_vendor_samsung_SHV-E120" path="vendor/samsung/SHV-E120" remote="github" revision="cm-11.0" />
+  <project name="evnit/android_device_samsung_e120k" path="device/samsung/e120k" remote="github" revision="cm-11.0" />
+  <project name="evnit/android_vendor_samsung_e120k" path="vendor/samsung/e120k" remote="github" revision="cm-11.0" />
   <project name="evnit/android_kernel_samsung_msm8660-common" path="kernel/samsung/msm8660-common" remote="github" revision="cm-11.0" />
   <project name="evnit/android_build_scripts" path="./" remote="github" revision="cm-11.0" />
 </manifest>
@@ -52,6 +52,6 @@ The first time you run this script, assuming you have not already run a repo syn
 ### OPTIONAL: If you want to build ClockworkMod:
 ```
 . build/envsetup.sh
-. build/tools/device/makerecoveries.sh cm_SHV-E120K-eng 
+. build/tools/device/makerecoveries.sh cm_e120kK-eng 
 ```
 
