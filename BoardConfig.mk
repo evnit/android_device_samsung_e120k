@@ -29,7 +29,7 @@ USE_CAMERA_STUB := true
 -include device/samsung/celox-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
--include vendor/samsung/SHV-E120K/BoardConfigVendor.mk
+-include vendor/samsung/e120/BoardConfigVendor.mk
 
 TARGET_BOOTLOADER_BOARD_NAME := MSM8660_SURF
 
@@ -43,7 +43,7 @@ TARGET_KERNEL_CONFIG        := cyanogenmod_SHV-E120K_defconfig
 TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660-common
 
 # Assert minimum baseband version
-TARGET_BOARD_INFO_FILE ?= device/samsung/SHV-E120K/board-info.txt
+TARGET_BOARD_INFO_FILE ?= device/samsung/e120/board-info.txt
 
 # cat /proc/emmc
 #dev:        size     erasesize name
@@ -60,4 +60,4 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 838860800
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 20044333056
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/SHV-E120K/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/e120/bluetooth
