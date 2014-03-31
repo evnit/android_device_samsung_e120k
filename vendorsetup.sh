@@ -1,2 +1,2 @@
-add_lunch_combo cm_e120-eng
+add_lunch_combo cm_e120k-eng
 
