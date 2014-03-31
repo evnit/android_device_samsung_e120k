@@ -30,10 +30,10 @@ BOARD_HAVE_NFC := true
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from celoxhd device
-$(call inherit-product, device/samsung/SHV-E120K/device.mk)
+$(call inherit-product, device/samsung/e120/device.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := full_SHV-E120K
+PRODUCT_NAME := full_e120
 PRODUCT_DEVICE := SHV-E120K
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
