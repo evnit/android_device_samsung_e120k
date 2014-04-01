@@ -23,7 +23,6 @@ To allow these additional repositories to be synced, you must create a file call
   <project name="evnit/android_device_samsung_e120k" path="device/samsung/e120k" remote="github" revision="cm-11.0" />
   <project name="evnit/android_vendor_samsung_e120k" path="vendor/samsung/e120k" remote="github" revision="cm-11.0" />
   <project name="evnit/android_kernel_samsung_msm8660-common" path="kernel/samsung/msm8660-common" remote="github" revision="cm-11.0" />
-  <project name="evnit/android_build_scripts" path="./" remote="github" revision="cm-11.0" />
 </manifest>
 ```
 **NOTE:** If you want to build in the Advanced Device Settings, un-comment the last two repositories to sync from my github instead of CyanogenMod.
@@ -52,6 +51,6 @@ The first time you run this script, assuming you have not already run a repo syn
 ### OPTIONAL: If you want to build ClockworkMod:
 ```
 . build/envsetup.sh
-. build/tools/device/makerecoveries.sh cm_e120kK-eng 
+. build/tools/device/makerecoveries.sh cm_e120k-eng 
 ```
 
