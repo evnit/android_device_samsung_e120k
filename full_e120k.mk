@@ -34,7 +34,7 @@ $(call inherit-product, device/samsung/e120k/device.mk)
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_e120k
-PRODUCT_DEVICE := e120k
+PRODUCT_DEVICE := SHV-E120K
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := e120k
+PRODUCT_MODEL := SHV-E120K
