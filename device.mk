@@ -20,6 +20,12 @@ $(call inherit-product-if-exists, vendor/samsung/e120k/e120k-vendor.mk)
 ## overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/e120k/overlay
 
+PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
+PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=320
+
 # Ramdisk
 PRODUCT_COPY_FILES += \
     device/samsung/e120k/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc
