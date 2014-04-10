@@ -34,12 +34,12 @@ USE_CAMERA_STUB := true
 TARGET_BOOTLOADER_BOARD_NAME := MSM8660_SURF
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := SHV-E120K,SHV-E120,msm8660,MSM8660_SURF,e120k,e120,dali
+TARGET_OTA_ASSERT_DEVICE := SHV-E120K,SHV-E120,e120k,dali
 
 # Kernel
 #BOARD_KERNEL_CMDLINE        := androidboot.hardware=qcom msm_watchdog.appsbark=0 msm_watchdog.enable=1 loglevel=4 androidboot.selinux=permissive
 BOARD_KERNEL_BASE           := 0x48000000
-TARGET_KERNEL_CONFIG        := cyanogenmod_SHV-E120K_defconfig
+TARGET_KERNEL_CONFIG        := cyanogenmod_e120k_defconfig
 TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660-common
 
 # Assert minimum baseband version
