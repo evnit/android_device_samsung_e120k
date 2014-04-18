@@ -20,7 +20,7 @@
 #
 
 # Add device specific blobs here
-# NFC
+# NFC 
 lib/hw/nfc.qcom.so
 lib/libpn544_fw.so:lib/libpn544_fw.so
 
