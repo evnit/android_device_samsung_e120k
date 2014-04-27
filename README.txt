@@ -35,4 +35,10 @@ PRODUCT_COPY_FILES += \
 3/ Command out in file device/samsung/msm8660-common/sepolicy/file.te
 # type audio_firmware_file, file_type;
 
-4/ Compile rom
+4/ remove config_enableTorch in device/samsung/celox-common/overlay/frameworks/base/core/res/res/values/config.xml
+remove config_enableTorch in /device/samsung/e120k/overlay/frameworks/base/core/res/res/values/config.xml
+remove device/samsung/celox-common/overlay/frameworks/base/core/res/res/values/arrays.xml
+
+
+5/ Compile rom
+
