@@ -31,4 +31,8 @@ PRODUCT_COPY_FILES += \
    vendor/aokp/prebuilt/bootanimation/bootanimation_720_1280.zip:system/media/bootanimation-alt.zip
 
 2/ Copy, paste, rename /vendor/aokp/overlay/samsung/i9100 to e120k and modify you want
-3/ Compile rom
+
+3/ Command out in file device/samsung/msm8660-common/sepolicy/file.te
+# type audio_firmware_file, file_type;
+
+4/ Compile rom
