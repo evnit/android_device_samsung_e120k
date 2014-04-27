@@ -1,3 +1,6 @@
+for AOKP:
+1/ Creat e120k.mk in: vendor/aokp/products/
+
 # Inherit AOSP device configuration for e120k.
 $(call inherit-product, device/samsung/e120k/full_e120k.mk)
 
@@ -26,3 +29,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
    vendor/aokp/prebuilt/bootanimation/bootanimation_720_1280.zip:system/media/bootanimation-alt.zip
+
+2/ Copy, paste, rename /vendor/aokp/overlay/samsung/i9100 to e120k and modify you want
+3/ Compile rom
