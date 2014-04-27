@@ -1,56 +1,36 @@
-## CM11.0 Build Instructions for e120k
+For AOKP:
+1/ Creat vendor/aokp/products/e120k.mk
+source e120k.mk:
+################# Start
+# Inherit AOSP device configuration for e120k.
+$(call inherit-product, device/samsung/e120k/full_e120k.mk)
 
-### Setting Up The Source Tree
-You will first need to follow the instructions at http://source.android.com/source/initializing.html to setup and initialize your build environment.
+# Inherit common product files.
+$(call inherit-product, vendor/aokp/configs/common.mk)
 
-Next, you will need to setup your working directory, download repo and init the CM10.2 repo in your new working directory:
-```
-1) mkdir ~/cm-11.0
-2) cd ~/cm-11.0
-3) curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo > ~/bin/repo
-4) chmod a+x ~/bin/repo
-5) repo init -u git://github.com/CyanogenMod/android.git -b cm-11.0
-```
-The rest of the commands must be executed while in ~/cm-11.0
+# Inherit GSM common stuff
+$(call inherit-product, vendor/aokp/configs/gsm.mk)
 
-### Syncing Additionl Repositories
-To allow these additional repositories to be synced, you must create a file called local_manifest.xml at .repo/local_manifests:
-```
-<?xml version="1.0" encoding="UTF-8"?>
-<manifest>
-  <project name="CyanogenMod/android_device_samsung_celox-common" path="device/samsung/celox-common" remote="github" revision="cm-11.0" />
-  <project name="CyanogenMod/android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="github" revision="cm-11.0" />
-  <project name="evnit/android_device_samsung_e120k" path="device/samsung/e120k" remote="github" revision="cm-11.0" />
-  <project name="evnit/android_vendor_samsung_e120k" path="vendor/samsung/e120k" remote="github" revision="cm-11.0" />
-  <project name="evnit/android_kernel_samsung_msm8660-common" path="kernel/samsung/msm8660-common" remote="github" revision="cm-11.0" />
-</manifest>
-```
-**NOTE:** If you want to build in the Advanced Device Settings, un-comment the last two repositories to sync from my github instead of CyanogenMod.
+# SGS2 overlay
+PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/e120k
 
-### Optimize your Linux installation for future rebuilds:
-```
-echo "export USE_CCACHE=1" >> ~/.bashrc
-prebuilts/misc/linux-x86/ccache/ccache -M 20G
-source ~/.bashrc
-```
-**NOTE:** 20GB cache here, but can be changed later
+# Setup device specific product configuration.
+PRODUCT_DEVICE := e120k
+PRODUCT_NAME := aokp_e120k
+PRODUCT_BRAND := Samsung
+PRODUCT_MODEL := SHV-E120K
 
-### Build Script
-There should be a build script located at the root of your working directory named start_build.sh. This script should be used to start the build process:
-```
-./start_build.sh [OPTION(s)]
-    -c    Clobber out directory before build
-    -s    Sync repositories before build
-    -p    Sync pre-builts before build
-```
-The first time you run this script, assuming you have not already run a repo sync and/or syncing the CM pre-builts, should be run with the -sp options to allow all repositories and pre-builts to be synced before build.
+# Set build fingerprint / ID / Product Name ect.
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=SHV-E120K TARGET_DEVICE=SHV-E120K BUILD_FINGERPRINT=samsung/SHV-E120K/SHV-E120K:4.1.2/JZO54K/KKMK1:user/release-keys PRIVATE_BUILD_DESC="SHV-E120K-user 4.1.2 JZO54K KKMK1 release-keys"
+PRODUCT_RELEASE_NAME := SHV-E120K
 
-**NOTE:** Only one command line argument will be accepted and all options can be combined into one command -csp (order of options is unimportant).
+# Copy i9100 specific prebuilt files
+PRODUCT_PACKAGES += \
+    Thinkfree
 
+PRODUCT_COPY_FILES += \
+   vendor/aokp/prebuilt/bootanimation/bootanimation_720_1280.zip:system/media/bootanimation-alt.zip
+####################### End
 
-### OPTIONAL: If you want to build ClockworkMod:
-```
-. build/envsetup.sh
-. build/tools/device/makerecoveries.sh cm_e120k-eng 
-```
-
+2/ copy, paste and rename vendor/aokp/overlay/samsung/i9100 to e120k (modify you want)
+3/ Compile rom
