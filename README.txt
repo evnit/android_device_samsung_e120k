@@ -10,7 +10,7 @@ $(call inherit-product, vendor/aokp/configs/common.mk)
 # Inherit GSM common stuff
 $(call inherit-product, vendor/aokp/configs/gsm.mk)
 
-# SGS2 overlay
+# e120k overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/e120k
 
 # Setup device specific product configuration.
@@ -23,7 +23,7 @@ PRODUCT_MODEL := SHV-E120K
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=SHV-E120K TARGET_DEVICE=SHV-E120K BUILD_FINGERPRINT=samsung/SHV-E120K/SHV-E120K:4.1.2/JZO54K/KKMK1:user/release-keys PRIVATE_BUILD_DESC="SHV-E120K-user 4.1.2 JZO54K KKMK1 release-keys"
 PRODUCT_RELEASE_NAME := SHV-E120K
 
-# Copy i9100 specific prebuilt files
+# Copy e120k specific prebuilt files
 PRODUCT_PACKAGES += \
     Thinkfree
 
