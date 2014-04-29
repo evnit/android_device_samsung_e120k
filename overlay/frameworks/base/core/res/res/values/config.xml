@@ -85,4 +85,8 @@
     
     <!-- If supported, are dreams enabled? (by default) -->
     <bool name="config_dreamsEnabledByDefault">false</bool>
+    
+    <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
+    autodetected from the Configuration. -->
+    <bool name="config_showNavigationBar">false</bool>
 </resources>
