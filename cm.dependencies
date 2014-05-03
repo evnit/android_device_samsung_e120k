@@ -1,5 +1,10 @@
 [
   {
+    "repository": "evnit/android_vendor_samsung_e120k",
+    "target_path": "vendor/samsung/e120k",
+    "revision": "cm-11.0"
+  },
+  {
     "repository": "android_device_samsung_qcom-common",
     "target_path": "device/samsung/qcom-common"
   },
@@ -12,9 +17,8 @@
     "target_path": "device/samsung/celox-common"
   },
   {
-    "repository": "android_kernel_samsung_msm8660-common",
-    "target_path": "kernel/samsung/msm8660-common"
+     "repository": "evnit/android_kernel_samsung_msm8660-common",
+     "target_path": "kernel/samsung/msm8660-common",
+     "revision": "cm-11.0"
   }
 ]
-
-
