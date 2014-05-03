@@ -14,8 +14,6 @@ persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
 
-dev.pm.dyn_samplingrate=1
-
 # Disable GC freed lines
 dalvik.vm.debug.alloc=0
 
@@ -78,4 +76,6 @@ persist.radio.add_power_save=1
 
 # System proverty snapshot disable
 persist.radio.snapshot_disabled=1
-
+debug.composition.type=gpu
+persist.hwc.mdpcomp.enable=false
+dev.pm.dyn_samplingrate=1
