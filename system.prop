@@ -76,6 +76,12 @@ persist.radio.add_power_save=1
 
 # System proverty snapshot disable
 persist.radio.snapshot_disabled=1
+
+#System prop for screen flicker
 debug.composition.type=gpu
 persist.hwc.mdpcomp.enable=false
 dev.pm.dyn_samplingrate=1
+
+# HDMI
+com.qc.hdmi_out=true
+ro.hdmi.enable=true
