@@ -42,11 +42,6 @@ BOARD_KERNEL_BASE           := 0x48000000
 TARGET_KERNEL_CONFIG        := cyanogenmod_e120k_defconfig
 TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660-common
 
-# TARGET_PREBUILT_KERNEL := device/samsung/e120k/kernel/zImage
-# KERNEL_EXTERNAL_MODULES:$(TARGET_OBJCOPY) device/samsung/e120k/kernel/modules/*.ko $(KERNEL_MODULES_OUT)/
-# TARGET_KERNEL_MODULES := KERNEL_EXTERNAL_MODULES
-# Assert minimum baseband version
-
 TARGET_BOARD_INFO_FILE ?= device/samsung/e120k/board-info.txt
 
 # cat /proc/emmc

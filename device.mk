@@ -28,7 +28,13 @@ PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=320
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    device/samsung/e120k/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc
+    device/samsung/e120k/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc \
+    device/samsung/e120k/ramdisk/init.qcom.class_core.sh:root/init.qcom.class_core.sh \
+    device/samsung/e120k/ramdisk/init.qcom.class_main.sh:root/init.qcom.class_main.sh \
+    device/samsung/e120k/ramdisk/init.qcom.early_boot.sh:root/init.qcom.early_boot.sh \
+    device/samsung/e120k/ramdisk/init.qcom.lpm_boot.sh:root/init.qcom.lpm_boot.sh \
+    device/samsung/e120k/ramdisk/init.qcom.sh:root/init.qcom.sh \
+    device/samsung/e120k/ramdisk/init.qcom.usb.sh:root/init.qcom.usb.sh
 
 # BT firmware
 PRODUCT_COPY_FILES += \
