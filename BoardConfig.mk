@@ -12,29 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#
-# This file sets variables that control the way modules are built
-# thorughout the system. It should not be used to conditionally
-# disable makefiles (the proper mechanism to control what gets
-# included in a build is to use PRODUCT_PACKAGES in a product
-# definition file).
-#
-
-# WARNING: This line must come *before* including the proprietary
-# variant, so that it gets overwritten by the parent (which goes
-# against the traditional rules of inheritance).
-USE_CAMERA_STUB := true
-
 # inherit from common celox
 -include device/samsung/celox-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
 -include vendor/samsung/e120k/BoardConfigVendor.mk
 
-TARGET_BOOTLOADER_BOARD_NAME := MSM8660_SURF
-
 # Assert
-TARGET_OTA_ASSERT_DEVICE := SHV-E120K,SHV-E120,e120k,dali
+TARGET_BOARD_INFO_FILE ?= device/samsung/e120k/board-info.txt
+TARGET_OTA_ASSERT_DEVICE := SHV-E120K,e120k,dali
 
 # Kernel
 BOARD_KERNEL_CMDLINE        := androidboot.hardware=qcom kgsl.mmutype=gpummu usb_id_pin_rework=true no_console_suspend=true zcache msm_watchdog.appsbark=0 msm_watchdog.enable=1 loglevel=4 androidboot.selinux=permissive
@@ -42,16 +28,9 @@ BOARD_KERNEL_BASE           := 0x48000000
 TARGET_KERNEL_CONFIG        := cyanogenmod_e120k_defconfig
 TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660-common
 
-TARGET_BOARD_INFO_FILE ?= device/samsung/e120k/board-info.txt
-
-# cat /proc/emmc
-#dev:        size     erasesize name
-#mmcblk0p22: 00fffc00 00000200 "recovery"
-#mmcblk0p8: 01000000 00000200 "boot"
-#mmcblk0p24: 5ffffc00 00000200 "system"
-#mmcblk0p26: 13fffe00 00000200 "cache"
-#mmcblk0p25: 9ffffe00 00000200 "userdata"
 TARGET_NO_RECOVERY := true
+
+# Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16776192
@@ -59,4 +38,5 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 838860800
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 20044333056
 TARGET_USERIMAGES_USE_EXT4 := true
 
+# Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/e120k/bluetooth
