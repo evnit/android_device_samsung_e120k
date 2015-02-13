@@ -20,14 +20,9 @@ $(call inherit-product-if-exists, vendor/samsung/e120k/e120k-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Ramdisk
 PRODUCT_COPY_FILES += \
-device/samsung/e120k/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc \
-device/samsung/e120k/ramdisk/init.qcom.class_core.sh:root/init.qcom.class_core.sh \
-device/samsung/e120k/ramdisk/init.qcom.class_main.sh:root/init.qcom.class_main.sh \
-device/samsung/e120k/ramdisk/init.qcom.early_boot.sh:root/init.qcom.early_boot.sh \
-device/samsung/e120k/ramdisk/init.qcom.lpm_boot.sh:root/init.qcom.lpm_boot.sh \
-device/samsung/e120k/ramdisk/init.qcom.sh:root/init.qcom.sh \
-device/samsung/e120k/ramdisk/init.qcom.usb.sh:root/init.qcom.usb.sh
+    $(LOCAL_PATH)/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc
 
 # Bluetooth
 PRODUCT_COPY_FILES += \
