@@ -1,2 +1,2 @@
-require version-baseband=E120KKKMK1
+require version-baseband=E120K:KKMK1
 
