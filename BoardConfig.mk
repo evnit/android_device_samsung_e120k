@@ -11,6 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+USE_CAMERA_STUB := true
 
 # inherit from common celox
 -include device/samsung/celox-common/BoardConfigCommon.mk
@@ -26,6 +27,7 @@ TARGET_OTA_ASSERT_DEVICE := SHV-E120K,e120k
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom kgsl.mmutype=gpummu usb_id_pin_rework=true no_console_suspend=true zcache msm_watchdog.appsbark=0 msm_watchdog.enable=1 loglevel=4 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x48000000
 TARGET_KERNEL_CONFIG := cyanogenmod_e120k_lollipop_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/msm8660-common
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
