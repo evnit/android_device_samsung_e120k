@@ -28,6 +28,8 @@ BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom kgsl.mmutype=gpummu usb_id_pin
 BOARD_KERNEL_BASE := 0x48000000
 TARGET_KERNEL_CONFIG := cyanogenmod_e120k_lollipop_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/msm8660-common
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+KERNEL_TOOLCHAIN := "$(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin/"
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
